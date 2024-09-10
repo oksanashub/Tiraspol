@@ -1,0 +1,292 @@
+:root {
+    --sec-color:#fff;
+    --bg-color: #272727;
+    --bck-color:#80A6FF;
+    --bcm-color:#484F5F;
+    --inp-color:bisque;
+    --in-color:white;
+    --icon: url(moon.png); 
+    --red-color:red;
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Comfortaa', cursive;
+}
+main {
+    color: var(--sec-color);
+    padding-bottom: 5%;
+    background: var(--bg-color);
+
+}
+.header__logo {
+    animation: pulse 1s infinite;
+}
+
+h1, p, h2 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.5s;
+}
+
+.subscribe {
+    background-color: var(--bck-color);
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscribe__text span {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.subscribe__form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.subscribe__form input {
+    border: none;
+    font: inherit;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input:focus {
+    background-color: var(--inp-color);;
+}
+
+.subscribe__form input:focus,
+.subscribe__form input:active {
+    border: none;
+    outline: none;
+}
+
+.push {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: var(--bck-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    color: var(--sec-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.push:hover {
+    background-color: var(--inp-color);
+    color: var(--bck-color);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+header {
+    padding: 3% 2%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background-color: var(--bcm-color);
+}
+
+.nav-list {
+    display: flex;
+    gap: 40px;
+}
+
+.menu {
+    display: inline-block;
+    color: var(--sec-color);
+}
+
+.menu:hover {
+    color: var(--red-color);
+}
+
+.line {
+    width: 60%;
+    margin: 0 auto;
+    height: 2px;
+    background: var(--bck-color);
+    margin-bottom: 5%;
+}
+
+.articles {
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card:hover {
+    animation: fadeIn 1s 1;
+}
+
+.card__img {
+    width: 100%;
+}
+
+.card__text {
+    padding: 3%;
+    background: var(--bck-color);
+}
+
+footer {
+    padding: 2% 3%;
+    background: var(--bck-color);
+    display: flex;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+
+input[type="checkbox"] {
+    display: none; 
+}
+label {
+    background-image: var(--icon);
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+}
+
+input:checked~* {
+    --sec-color:#2a1616;
+    --bg-color: #cce1e9e8;
+    --bck-color:#5987a441;
+    --bcm-color:#a2b8e2;
+    --inp-color:rgb(170, 170, 170);
+    --in-color:rgb(229, 240, 247);
+    --icon: url(sun.png); 
+    
+}
+
+
+
+
+
+
+@media (max-width: 1366px) and (min-width: 1024px) {
+    .articles {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+}
+
+@media (min-width: 1366px) and (max-width:1024px) {
+    .articles {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+}
+
+@media (min-width: 912px) and (max-width:1368px) {
+    .articles {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+}
+
+
+/* планшеты горизонтально */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .card {
+        width: 45%;
+    }
+    .social-icons {
+        flex-wrap: wrap;
+        gap: 26px;
+    }
+}
+
+/* планшеты вертикально */
+@media (min-width: 768px) and (max-width: 991px) {
+
+.card {
+        width: 45%;
+    }
+    .articles {
+        padding: 22% 10%;
+
+    }
+    .subscribe {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .social-icons {
+        gap: 26px;
+    }
+}
+/* телефоны горизонтально */
+@media (max-width: 767px) {
+    .subscribe {
+        flex-direction: column;
+        gap: 30px;
+
+    }
+    .articles{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .card{
+        width: 90%;
+    }
+}
+
+/* телефоны вертикально */
+@media (max-width: 480px) {
+    .subscribe__form {
+        flex-direction:column;
+    }
+    .header__logo {
+        width: 20%;
+    }
+
+    .footer-list {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    header {
+        flex-direction: column;
+    }
+}
